@@ -165,7 +165,8 @@ nav {
 }
 /* Hero */
 .hero {
-    background-color: var(--third-bg-color);
+    background-color: rgba(196, 196, 196, 1);
+    background-image: url("/images/hero.jpg");
 
     text-align: center;
 
@@ -400,3 +401,12 @@ footer {
     line-height: 2;
     letter-spacing: 0.06em;
 }
+
+.icon-qual {
+    margin-bottom: 30px;
+    width: 270px;
+    height: 120px;
+    background-color: var(--secondary-bg-color);
+
+}
+

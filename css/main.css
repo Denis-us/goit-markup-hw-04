@@ -33,6 +33,10 @@ h1, h2, h3, li, a, ul, p {
     padding: 0;
 }
 
+li {
+    list-style: none;
+}
+
 .logo-header {
     color: var(--main-text-color);
     font-family: Raleway;
@@ -84,13 +88,6 @@ nav {
     list-style-type: none;
 }
 
-.header-address {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-}
-
-
 .logo-web {
     color: var(--accent-color);
     font-family: Raleway;
@@ -121,11 +118,23 @@ nav {
 
 /* Adress */
 .header-address {
+    display:flex;
+    align-items: center;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+
+    margin-left: auto;
+}
+
+.nav-icon {
+    fill:currentColor;
+    margin-right: 10px;
+    padding: 0;
+   
+
 }
 
 .footer-address a,
@@ -163,12 +172,14 @@ nav {
 .contact:focus {
     color: var(--accent-color);
 }
+
 /* Hero */
 .hero {
     background-color: rgba(196, 196, 196, 1);
     background-image: url("/images/hero.jpg");
-
+    height: 600px;
     text-align: center;
+    margin: 0 auto;
 
     padding-top: 200px;
     padding-bottom: 210px;
@@ -207,8 +218,13 @@ nav {
     padding-bottom: 94px;
 }
 
-.section.team {
+.section-team {
     background-color: var(--secondary-bg-color);
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.section-clients {
     padding-top: 94px;
     padding-bottom: 94px;
 }
@@ -227,7 +243,16 @@ nav {
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+}
 
+.clients-title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em; 
+
+    margin-bottom: 74px;
 }
 
 .qualities-text {
@@ -263,7 +288,12 @@ nav {
 .info {
     padding-top: 30px;
     padding-bottom: 30px;
+} 
+
+.icon-spec:hover {
+    background-image:var(--accent-color)
 }
+
 
 /* Button */
 .primary-button {
@@ -280,7 +310,7 @@ nav {
     text-decoration: none;
 
     display: inline-block;
-    margin-top: 40px;
+    margin-top: 30px;
     text-align: center;
     border-radius: 4px;
     padding: 10px 32px;
@@ -346,7 +376,7 @@ nav {
 
 .container-element.spec {
     width: 270px;
-    height: 368px;
+    height: 428px;
     background-color: var(--main-bg-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
@@ -402,11 +432,97 @@ footer {
     letter-spacing: 0.06em;
 }
 
-.icon-qual {
-    margin-bottom: 30px;
+.qualit-ico {
+    display:block;
+    content: "";
     width: 270px;
     height: 120px;
+    margin-bottom: 30px;
+    background-position: center;
     background-color: var(--secondary-bg-color);
+    background-size: auto;
+}
 
+.icon-qual {
+    width: 270px;
+    height: 120px;
+    
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.social-networks {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    margin-bottom: 30px;
+}
+
+.list-clients {
+    display: flex;
+}
+
+.container-client {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    width: 170px;
+    height: 90px;
+    
+    margin-bottom: 30px;
+    background-position: center;
+    background-color: var(--main-bg-color);
+    background-size: auto;
+}
+
+.container-client:not(:last-child) {
+    margin-right: 30px;
+}
+
+.client {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 90px;
+    margin:auto;
+}
+
+.icon-spec {
+    fill: currentColor;
+}
+
+.icon-spec:not(:last-child) {
+    margin-right: 10px;
+}
+
+.icon-spec:hover,
+.icon-spec:focus {
+    fill: var(--accent-color)
+}
+
+.social-element:not(:last-child) {
+    margin-right: 10px;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.container-social {
+    margin-left: 70px;
+}
+
+.footer-text {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    color: var(--main-bg-color);
+
+    margin-bottom: 20px;
 }
 

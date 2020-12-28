@@ -446,7 +446,7 @@ footer {
 .icon-qual {
     width: 270px;
     height: 120px;
-    
+
     padding-top: 25px;
     padding-bottom: 25px;
 }
@@ -458,53 +458,81 @@ footer {
     margin-bottom: 30px;
 }
 
-.list-clients {
-    display: flex;
-}
-
-.container-client {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.list-client {
     border: 1px solid #AFB1B8;
     border-radius: 4px;
     width: 170px;
     height: 90px;
     
     margin-bottom: 30px;
-    background-position: center;
     background-color: var(--main-bg-color);
-    background-size: auto;
+
 }
 
-.container-client:not(:last-child) {
+.list-client:not(:last-child) {
     margin-right: 30px;
 }
 
-.client {
+.list-client:hover,
+.list-client:focus {
+    border: 1px solid var(--accent-color);
+}
+
+.container-client {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(175,177,184,1);
+    width: 170px;
+    height: 90px;
+}
+
+.container-client .client {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 170px;
     height: 90px;
-    margin:auto;
+    fill: currentColor;
+}
+
+.container-client .client:hover,
+.container-client .client:focus {
+    fill: var(--accent-color);
 }
 
 .icon-spec {
+    height: 20px;
+    width: 20px;
     fill: currentColor;
+}
+
+.icon {
+    color: rgba(175,177,184,1);
 }
 
 .icon-spec:not(:last-child) {
     margin-right: 10px;
 }
 
-.icon-spec:hover,
-.icon-spec:focus {
-    fill: var(--accent-color)
+.icon:hover,
+.icon:focus {
+    color: var(--main-bg-color);
+}
+
+.social-element {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
 }
 
 .social-element:not(:last-child) {
     margin-right: 10px;
+}
+
+.social-element:hover,
+.social-element:focus {
+    background-color: var(--accent-color);
 }
 
 .footer-nav {
@@ -524,5 +552,18 @@ footer {
     color: var(--main-bg-color);
 
     margin-bottom: 20px;
+}
+
+.footer-icon {
+    color: var(--main-bg-color);
+}
+
+.container-social .social-element {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.container-social .social-element:hover,
+.container-social .social-element:focus {
+    background-color: var(--accent-color);
 }
 

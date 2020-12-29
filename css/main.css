@@ -446,9 +446,10 @@ footer {
 .icon-qual {
     width: 270px;
     height: 120px;
-
     padding-top: 25px;
     padding-bottom: 25px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .social-networks {
@@ -471,6 +472,11 @@ footer {
 
 .list-client:not(:last-child) {
     margin-right: 30px;
+}
+
+.container-client:hover,
+.container-client:focus {
+    color: var(--accent-color);
 }
 
 .list-client:hover,

@@ -491,8 +491,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 170px;
-    height: 90px;
     fill: currentColor;
 }
 

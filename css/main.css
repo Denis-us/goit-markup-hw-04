@@ -177,6 +177,9 @@ nav {
 .hero {
     background-color: rgba(196, 196, 196, 1);
     background-image: url("/images/hero.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 600px;
     text-align: center;
     margin: 0 auto;
@@ -290,7 +293,8 @@ nav {
     padding-bottom: 30px;
 } 
 
-.icon-spec:hover {
+.icon-spec:hover,
+.icon-spec:focus {
     background-image:var(--accent-color)
 }
 
@@ -389,6 +393,11 @@ nav {
 
     margin-bottom: 30px;
     margin-right: 30px;
+}
+
+.proj:hover,
+.proj:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .proj:nth-child(3n) {

@@ -269,6 +269,52 @@ nav {
     margin-top: 10px;
 }
 
+/* What are we doing */
+.direction-block {
+    display: flex;
+    position:relative;
+    width: 370px;
+    height: 294px;
+}
+
+.direction-block::before {
+    position: absolute;
+    content:"";
+    width: 100%;
+    height: 70px;
+
+    bottom:0;
+    left: 0;
+
+    background-color: rgba(47, 48, 58, 0.8);;
+    
+    opacity: 0;
+    }
+
+.direction-block:hover::before {
+    opacity: 1;
+}
+
+.direction-text {    
+    position: absolute;  
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+
+    width: 370px;
+    height: 294px;
+
+    padding-top: 251px;
+
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    opacity: 0;
+}
+
+.direction-text:hover {
+    opacity: 1;
+}
 
 /* Specialists */
 .specialist {
@@ -333,14 +379,16 @@ nav {
     display: inline-block;
     text-align: center;
     border: none;
-    border-radius: 4px;
     padding: 6px 22px;
+    cursor:pointer;
 }
 
 .button:hover,
 .button:focus {
     color: var(--main-bg-color);
     background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
 }
 
 .button-element:not(:last-child) {
@@ -396,6 +444,10 @@ nav {
     margin-right: 30px;
 }
 
+.project {
+    text-decoration: none;
+}
+
 .proj:hover,
 .proj:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -430,9 +482,46 @@ footer {
     margin-top: 4px;
 }
 
-.project {
-    display:flex;
-    text-decoration: none;
+.project-block {
+    position:relative;
+}
+
+.project-block:hover::before {
+    opacity: 1;
+}
+
+.project-block::before {
+    position: absolute;
+    content:"";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+
+    opacity: 0;
+}
+
+.project-description {
+    position: absolute;
+    font-size: 18px;
+    line-height: 28px;
+
+    letter-spacing: 1,5;
+    color:#FFFFFF;
+
+    width: 370px;
+    height: 294px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 63px 24px 63px 24px;
+
+    opacity: 0;
+}
+
+.project-description:hover {
+    opacity: 1;
 }
 
 .project-title {
@@ -444,7 +533,6 @@ footer {
 
 .qualit-ico {
     display:block;
-    content: "";
     width: 270px;
     height: 120px;
     margin-bottom: 30px;

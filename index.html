@@ -43,7 +43,16 @@
         <!-- Герой -->
         <section class="hero">
             <h1 class="hero-title">Эффективные решения <br> для вашего бизнеса</h1>
-            <a href="" class="primary-button">Заказать услугу</a>
+            <button class="primary-button" data-modal-open>Заказать услугу</button>
+            <div class="backdrop is-hidden" data-modal>
+                <div class="modal">
+                    <button class="button-closer" data-modal-close>
+                        <svg class="closer-icon" width="11" height="11">
+                            <use href="./images/symbol-defs.svg#icon-close"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </section>
         
         <!-- Качества -->
@@ -384,7 +393,8 @@
                 </div>
             </div>
         </section>
-     </footer>
+    </footer>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>

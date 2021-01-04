@@ -183,8 +183,13 @@ nav {
 
 /* Hero */
 .hero {
-    background-color: rgba(196, 196, 196, 1);
-    background-image: url("../images/hero.jpg");
+    background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero.jpg);
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -356,12 +361,6 @@ nav {
     padding-bottom: 30px;
 } 
 
-.icon-spec:hover,
-.icon-spec:focus {
-    background-image:var(--accent-color)
-}
-
-
 /* Button */
 .backdrop {
     position: fixed;
@@ -507,7 +506,6 @@ nav {
 .container-element.proj {
     width: 370px;
     height: 404px;
-    border: 1px solid #EEEEEE;
 
     margin-bottom: 30px;
     margin-right: 30px;
@@ -517,12 +515,16 @@ nav {
 }
 
 .project {
-    text-decoration: none;
+    border: 1px solid #EEEEEE;
 }
 
-.proj:hover,
-.proj:focus {
+.project:hover,
+.project:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.project {
+    text-decoration: none;
 }
 
 .proj:nth-child(3n) {
@@ -660,11 +662,6 @@ footer {
     margin-right: 30px;
 }
 
-.container-client:hover,
-.container-client:focus {
-    color: var(--accent-color);
-}
-
 .list-client:hover,
 .list-client:focus {
     border: 1px solid var(--accent-color);
@@ -693,23 +690,21 @@ footer {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.container-client .client:hover,
-.container-client .client:focus {
-    fill: var(--accent-color);
+.container-client:hover .client,
+.container-client:focus .client {
+    color: var(--accent-color);
 }
 
 .icon-spec {
-    height: 20px;
-    width: 20px;
-    fill: currentColor;
-
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 .icon {
     color: rgba(175,177,184,1);
+
+    fill: currentColor;
+    border-radius: 50%;
 
     transition-property: color;
     transition-duration: 250ms;
@@ -720,16 +715,19 @@ footer {
     margin-right: 10px;
 }
 
-.icon-spec .icon:hover,
-.icon-spec .icon:focus {
+
+.icon-spec:hover .icon,
+.icon-spec:focus .icon,
+.icon-spec:hover .footer-icon,
+.icon-spec:focus .footer-icon {
     color: var(--main-bg-color);
+    background-color: var(--accent-color);
 }
 
 .social-element {
-    width: 44px;
     height: 44px;
+    width: 44px;
     border-radius: 50%;
-
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -737,11 +735,6 @@ footer {
 
 .social-element:not(:last-child) {
     margin-right: 10px;
-}
-
-.social-element:hover,
-.social-element:focus {
-    background-color: var(--accent-color);
 }
 
 .footer-nav {
@@ -764,7 +757,8 @@ footer {
 }
 
 .footer-icon {
-    color: var(--main-bg-color);
+    fill: var(--main-bg-color);
+    border-radius: 50%;
 }
 
 .container-social .social-element {

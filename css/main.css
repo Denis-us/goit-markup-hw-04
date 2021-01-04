@@ -302,7 +302,8 @@ nav {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-.direction-block:hover::before {
+.direction-block:hover::before,
+.direction-block:focus::before {
     opacity: 1;
 }
 
@@ -326,7 +327,8 @@ nav {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.direction-text:hover {
+.direction-text:hover,
+.direction-text:focus {
     opacity: 1;
 }
 
@@ -718,8 +720,8 @@ footer {
     margin-right: 10px;
 }
 
-.icon:hover,
-.icon:focus {
+.icon-spec .icon:hover,
+.icon-spec .icon:focus {
     color: var(--main-bg-color);
 }
 

@@ -562,7 +562,7 @@ footer {
 
 .project-block {
     position:relative;
-    /* overflow: hidden; */
+    overflow: hidden;
     width: 370px;
     height: 294px;
 }
@@ -594,7 +594,7 @@ footer {
     line-height: 28px;
 
     letter-spacing: 1,5;
-    color:red;
+    color:#ffffff;
 
     top: 0;
     left: 0;
@@ -609,8 +609,8 @@ footer {
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project-description:hover,
-.project-description:focus {
+.project-block:hover .project-description,
+.project-block:focus .project-description {
     transform: translateY(0%);
 }
 

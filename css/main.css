@@ -114,9 +114,7 @@ nav {
     margin-right: 50px;
     height: 80px;
 
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link:hover,
@@ -135,16 +133,19 @@ nav {
     width: 100%;
     height: 4px;
     background-color: var(--accent-color);
-
-    /* opacity: 0; */
+    border-radius: 2px;
 
     transform: scaleX(0);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:hover::after {
-    /* opacity: 1; */
     transform: scaleX(1);
+}
+
+.link:focus::after {
+    transform: scaleX(1);
+    background-color: var(--accent-color); 
 }
 
 /* Adress */
@@ -164,7 +165,6 @@ nav {
     fill:currentColor;
     margin-right: 10px;
     padding: 0;
-   
 
 }
 
@@ -313,6 +313,7 @@ nav {
     position:relative;
     width: 370px;
     height: 294px;
+    overflow: hidden;
 }
 
 .direction-block::before {
@@ -326,40 +327,42 @@ nav {
 
     background-color: rgba(47, 48, 58, 0.8);;
     
-    opacity: 0;
+    transform: translateY(100%);
 
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
 .direction-block:hover::before,
 .direction-block:focus::before {
-    opacity: 1;
+    transform: translateY(0%)
 }
 
 .direction-text {    
     position: absolute;  
+    display: flex;
     font-size: 14px;
     line-height: 16px;
     text-align: center;
 
-    width: 370px;
-    height: 294px;
+    justify-content: center;
+    align-items: center;
 
-    padding-top: 251px;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    height: 70px;
 
     text-transform: uppercase;
     color: #FFFFFF;
 
-    opacity: 0;
+    transform: translateY(100%);
 
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.direction-text:hover,
-.direction-text:focus {
-    opacity: 1;
+.direction-block:hover .direction-text,
+.direction-block:hover .direction-text {
+    transform: translateY(0%)
 }
 
 /* Specialists */
@@ -396,6 +399,8 @@ nav {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -403,16 +408,22 @@ nav {
     pointer-events: none;
 }
 
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
 .modal {
     position:absolute;
     top: 50%;
     left:50%;
-    transform: translate(-50%, -50%);
 
     width: 528px;
     height: 581px;
 
     background-color: #FFFFFF;
+    transform: translate(-50%, -50%) scale(1);
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-closer {
@@ -472,8 +483,7 @@ nav {
     padding: 6px 22px;
     cursor:pointer;
 
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
@@ -535,8 +545,7 @@ nav {
     margin-bottom: 30px;
     margin-right: 30px;
 
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project {
@@ -681,9 +690,7 @@ footer {
     margin-bottom: 30px;
     background-color: var(--main-bg-color);
 
-    transition-property: border;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -704,9 +711,7 @@ footer {
     width: 170px;
     height: 90px;
 
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .container-client .client {
@@ -715,18 +720,12 @@ footer {
     align-items: center;
     fill: currentColor;
 
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .container-client:hover .client,
 .container-client:focus .client {
     color: var(--accent-color);
-}
-
-.icon-spec {
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon {
@@ -735,9 +734,7 @@ footer {
     fill: currentColor;
     border-radius: 50%;
 
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-spec:not(:last-child) {
@@ -751,15 +748,13 @@ footer {
 .icon-spec:focus .footer-icon {
     color: var(--main-bg-color);
     background-color: var(--accent-color);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-element {
     height: 44px;
     width: 44px;
     border-radius: 50%;
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-element:not(:last-child) {
@@ -793,9 +788,7 @@ footer {
 .container-social .social-element {
     background-color: rgba(255, 255, 255, 0.1);
 
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .container-social .social-element:hover,
